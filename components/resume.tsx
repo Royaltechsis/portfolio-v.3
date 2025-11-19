@@ -1,0 +1,158 @@
+"use client"
+
+const skillIcons: { [key: string]: string } = {
+  // Backend
+  Node: "🟢",
+  Express: "🚂",
+  MongoDB: "🍃",
+  // Frontend
+  React: "⚛️",
+  "React Native": "📱",
+  JavaScript: "💛",
+  TypeScript: "📘",
+  TailwindCSS: "🌊",
+  "Next.js": "▲",
+  WordPress: "📝",
+}
+
+const skills = [
+  { name: "Node", level: 75 },
+  { name: "Express", level: 75 },
+  { name: "TypeScript", level: 80 },
+  { name: "JavaScript", level: 80 },
+  { name: "MongoDB", level: 76 },
+  { name: "React", level: 80 },
+  { name: "React Native", level: 65 },
+  { name: "TailwindCSS", level: 99 },
+  { name: "Next.js", level: 60 },
+  { name: "WordPress", level: 90 },
+]
+
+const strengths = [
+  { strenght: "Critical Thinking" },
+  { strenght: "Problem Solving" },
+  { strenght: "Teamwork" },
+  { strenght: "Open-Mindedness" },
+  { strenght: "Adaptability" },
+]
+
+const education = [
+  {
+    institution: "Federal University of Technology, Akure (FUTA)",
+    program: "B.Tech Software Engineering",
+    duration: "2023 - Present",
+  },
+  {
+    institution: "Web3Bridge Cohort XI",
+    program: "Senior Web 2 Developer Certification",
+    duration: "2024",
+  },
+  {
+    institution: "Web3Bridge Cohort XII",
+    program: "Web 3 Developer Certification",
+    duration: "2025 - Present",
+  },
+  {
+    institution: "She Codes Africa Mentorship Program",
+    program: "Backend Developer Certification",
+    duration: "2024 - Present",
+  },
+  {
+    institution: "D'Online Harvest Academy",
+    program: "Junior Front-end Developer Certificate",
+    duration: "2020 - Present",
+  },
+  {
+    institution: "Google Developer Student Club (GDSC)",
+    program: "Hackathon Finalist",
+    duration: "2024",
+  },
+]
+
+export default function Resume() {
+  return (
+    <section id="resume" className="py-20 md:py-32 px-6">
+      <div className="max-w-5xl mx-auto">
+        <div className="mb-16 text-center">
+          <p className="text-primary font-semibold mb-3 tracking-widest uppercase text-sm">Expertise & Background</p>
+          <h2 className="text-4xl md:text-5xl font-bold text-balance mb-4">Skills, Education & More</h2>
+          <p className="text-foreground/70 text-lg">Everything you need to know about my professional capabilities.</p>
+        </div>
+
+        {/* Skills with Progress Bars */}
+        <div className="mb-16">
+          <h3 className="text-2xl font-bold mb-6 text-foreground">Technical Skills</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {skills.map((skill) => (
+              <div
+                key={skill.name}
+                className="p-6 rounded-xl bg-gradient-to-br from-primary/5 to-accent/5 border border-primary/20 hover:border-primary/40 transition-all duration-300"
+              >
+                <div className="flex items-center justify-between mb-3">
+                  <div className="flex items-center gap-3">
+                    <span className="text-2xl">{skillIcons[skill.name] || "⚙️"}</span>
+                    <span className="font-semibold text-foreground">{skill.name}</span>
+                  </div>
+                  <span className="text-sm font-bold text-primary">{skill.level}%</span>
+                </div>
+                <div className="w-full bg-muted rounded-full h-2 overflow-hidden">
+                  <div
+                    className="h-full bg-gradient-to-r from-primary to-accent rounded-full transition-all duration-500"
+                    style={{ width: `${skill.level}%` }}
+                  />
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Strengths */}
+        <div className="mb-16">
+          <h3 className="text-2xl font-bold mb-6 text-foreground">Core Strengths</h3>
+          <div className="flex flex-wrap gap-3">
+            {strengths.map((item, index) => (
+              <div
+                key={index}
+                className="px-6 py-3 rounded-full bg-gradient-to-r from-primary/20 to-accent/20 text-primary border border-primary/30 hover:border-primary/60 transition-all duration-300 font-medium"
+              >
+                {item.strenght}
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Education */}
+        <div className="mb-16">
+          <h3 className="text-2xl font-bold mb-6 text-foreground">Education & Certifications</h3>
+          <div className="space-y-4">
+            {education.map((edu, index) => (
+              <div
+                key={index}
+                className="p-6 bg-card border border-border/40 rounded-xl hover:border-primary/40 transition-all duration-300 hover:shadow-lg"
+              >
+                <h4 className="font-bold text-lg text-foreground">{edu.institution}</h4>
+                <p className="text-primary font-semibold mt-1">{edu.program}</p>
+                <p className="text-foreground/60 text-sm mt-2">{edu.duration}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Resume Download */}
+        <div className="text-center">
+          <button className="inline-flex items-center gap-3 px-8 py-3 bg-primary text-primary-foreground rounded-lg font-semibold hover:shadow-lg hover:shadow-primary/30 transition-all duration-300">
+            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+              />
+            </svg>
+            Download My Resume
+          </button>
+        </div>
+      </div>
+    </section>
+  )
+}
