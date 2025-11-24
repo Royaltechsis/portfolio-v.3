@@ -74,9 +74,9 @@ export default function Contact() {
         <div className="flex justify-center gap-6 mb-12 animate-fade-in-up" style={{ animationDelay: "0.4s" }}>
           {[
             { icon: <FaLinkedin className="w-5 h-5" />, label: "LinkedIn", href: "#" },
-            { icon: <FaGithub className="w-5 h-5" />, label: "GitHub", href: "#" },
-            { icon: <FaTwitter className="w-5 h-5" />, label: "Twitter", href: "#" },
-            { icon: <Mail className="w-5 h-5" />, label: "Email", href: "mailto:" },
+            { icon: <FaGithub className="w-5 h-5" />, label: "GitHub", href: "https://github.com/royaltechsis" },
+            { icon: <FaTwitter className="w-5 h-5" />, label: "Twitter", href: "https://twitter.com/royaltechsis" },
+            { icon: <Mail className="w-5 h-5" />, label: "Email", href: "mailto:osenibunmi2023@gmail.com" },
           ].map((social, i) => (
             <a
               key={social.label}
