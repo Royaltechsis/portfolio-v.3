@@ -174,12 +174,6 @@ export const projects: Project[] = [
   },
   {
     id: 18,
-    tags: ["React", "Firebase", "Tailwind CSS", "JavaScript"],
-    link: "https://osenis-linked-in-clone.vercel.app",
-    codeLink: "https://github.com/Royaltechsis/Oseni-s-LinkedIn-Clone",
-  },
-  {
-    id: 17,
     title: "Goal App",
     description: "A Web App that allows you to set and track your goals.",
     image: "/project-management-interface.jpg",
@@ -188,7 +182,7 @@ export const projects: Project[] = [
     codeLink: "https://github.com/Royaltechsis/goalapp",
   },
   {
-    id: 18,
+    id: 19,
     title: "To-do-list",
     description: "A to-do list website.",
     image: "/project-management-interface.png",
@@ -197,21 +191,12 @@ export const projects: Project[] = [
     codeLink: "https://github.com/Royaltechsis/to-do-list-project",
   },
   {
-    id: 19,
+    id: 20,
     title: "Multi-Step Form",
     description: "A dynamic multi-step form implementation.",
     image: "/placeholder.jpg",
     tags: ["React", "Tailwind CSS", "TypeScript"],
     link: "https://multi-step-form-bay-theta.vercel.app",
     codeLink: "https://github.com/Royaltechsis/multi-step-form",
-  },
-  {
-    id: 20,
-    title: "JWT Secret Generator",
-    description: "A secure 32-bit random JWT secret generator tool with one-click copy functionality for developers.",
-    image: "/placeholder.jpg",
-    tags: ["React", "JavaScript", "Security", "Developer Tools"],
-    link: "https://jwt-secret-gen.vercel.app/",
-    codeLink: "https://github.com/Royaltechsis/jwt_secret-gen",
   },
 ]
