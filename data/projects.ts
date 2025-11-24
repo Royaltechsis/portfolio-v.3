@@ -100,6 +100,16 @@ export const projects: Project[] = [
   },
   {
     id: 10,
+    title: "Event Management System",
+    description: "An event management system with automatic Google Calendar sync. Events are added to users' calendars with a single click.",
+    image: "/placeholder.jpg",
+    tags: ["React", "Google Calendar API", "Event Management", "Real-time Sync"],
+    link: "https://infhinetclass.vercel.app/event",
+    codeLink: "https://github.com/Royaltechsis/infhinetclass/",
+    isPrivate: true,
+  },
+  {
+    id: 11,
     title: "Nuel's Store",
     description: "An e-commerce platform for gadgets. (sign up first to use)",
     image: "/ecommerce-dashboard.png",
@@ -108,7 +118,7 @@ export const projects: Project[] = [
     codeLink: "https://github.com/Royaltechsis/Nuel-Store",
   },
   {
-    id: 11,
+    id: 12,
     title: "Healthy Skincare",
     description: "A Website with ecommerce capabilities for HSC",
     image: "/ecommerce-interface.jpg",
@@ -118,7 +128,7 @@ export const projects: Project[] = [
     isPrivate: true,
   },
   {
-    id: 12,
+    id: 13,
     title: "Oluwasola Ajao & Company",
     description: "A website for Oluwasola Ajao and Co (Chartered Accountants)",
     image: "/placeholder.jpg",
@@ -128,7 +138,7 @@ export const projects: Project[] = [
     isPrivate: true,
   },
   {
-    id: 13,
+    id: 14,
     title: "Easy Banking Landing Page",
     description: "Landing page for an easy banking service. (Static landing page design)",
     image: "/analytics-dashboard.png",
@@ -137,7 +147,7 @@ export const projects: Project[] = [
     codeLink: "https://github.com/Royaltechsis/easy-banking-landing-page",
   },
   {
-    id: 14,
+    id: 15,
     title: "Infhinet Ways",
     description: "A personal Blogging platform",
     image: "/placeholder.jpg",
@@ -146,7 +156,7 @@ export const projects: Project[] = [
     codeLink: "https://github.com/Royaltechsis/infhinet-ways",
   },
   {
-    id: 15,
+    id: 16,
     title: "My Tube",
     description: "A YouTube Video feed made with React.",
     image: "/react-development-code.jpg",
@@ -155,7 +165,7 @@ export const projects: Project[] = [
     codeLink: "https://github.com/Royaltechsis/my-tube",
   },
   {
-    id: 16,
+    id: 17,
     title: "Meme Generator",
     description: "Create and share memes easily.",
     image: "/placeholder.jpg",
@@ -164,7 +174,7 @@ export const projects: Project[] = [
     codeLink: "https://github.com/Royaltechsis/meme-generator",
   },
   {
-    id: 17,
+    id: 18,
     title: "Oseni's LinkedIn Clone",
     description: "A LinkedIn clone with Google Auth.",
     image: "/placeholder.jpg",
@@ -173,7 +183,7 @@ export const projects: Project[] = [
     codeLink: "https://github.com/Royaltechsis/Oseni-s-LinkedIn-Clone",
   },
   {
-    id: 18,
+    id: 19,
     title: "Goal App",
     description: "A Web App that allows you to set and track your goals.",
     image: "/project-management-interface.jpg",
@@ -182,7 +192,7 @@ export const projects: Project[] = [
     codeLink: "https://github.com/Royaltechsis/goalapp",
   },
   {
-    id: 19,
+    id: 20,
     title: "To-do-list",
     description: "A to-do list website.",
     image: "/project-management-interface.png",
@@ -191,7 +201,7 @@ export const projects: Project[] = [
     codeLink: "https://github.com/Royaltechsis/to-do-list-project",
   },
   {
-    id: 20,
+    id: 21,
     title: "Multi-Step Form",
     description: "A dynamic multi-step form implementation.",
     image: "/placeholder.jpg",
