@@ -14,7 +14,7 @@ export default function Hero({ setActiveSection }: HeroProps) {
   }, [])
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center pt-16 relative overflow-hidden">
+    <section id="home" className="min-h-screen flex items-center justify-center pt-30 relative overflow-hidden">
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-20 right-10 w-96 h-96 bg-accent/8 rounded-full blur-3xl" />
         <div className="absolute bottom-20 left-10 w-96 h-96 bg-primary/8 rounded-full blur-3xl" />
