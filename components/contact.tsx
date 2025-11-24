@@ -3,6 +3,8 @@
 import type React from "react"
 
 import { useState } from "react"
+import { FaLinkedin, FaGithub, FaTwitter } from "react-icons/fa"
+import { Mail } from "lucide-react"
 
 export default function Contact() {
   const [formData, setFormData] = useState({ name: "", email: "", message: "" })
@@ -71,15 +73,15 @@ export default function Contact() {
         {/* Social Links */}
         <div className="flex justify-center gap-6 mb-12 animate-fade-in-up" style={{ animationDelay: "0.4s" }}>
           {[
-            { icon: "🔗", label: "LinkedIn" },
-            { icon: "🐙", label: "GitHub" },
-            { icon: "🐦", label: "Twitter" },
-            { icon: "📧", label: "Email" },
+            { icon: <FaLinkedin className="w-5 h-5" />, label: "LinkedIn", href: "#" },
+            { icon: <FaGithub className="w-5 h-5" />, label: "GitHub", href: "#" },
+            { icon: <FaTwitter className="w-5 h-5" />, label: "Twitter", href: "#" },
+            { icon: <Mail className="w-5 h-5" />, label: "Email", href: "mailto:" },
           ].map((social, i) => (
             <a
               key={social.label}
-              href="#"
-              className="w-12 h-12 flex items-center justify-center rounded-full bg-card border border-border hover:border-accent hover:bg-accent/10 transition-all duration-300 text-lg hover:scale-110 hover:shadow-lg hover:shadow-accent/20 animate-scale-in"
+              href={social.href}
+              className="w-12 h-12 flex items-center justify-center rounded-full bg-card border border-border hover:border-accent hover:bg-accent/10 transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-accent/20 animate-scale-in"
               style={{ animationDelay: `${0.4 + i * 0.1}s` }}
               title={social.label}
             >
@@ -91,7 +93,7 @@ export default function Contact() {
         {/* Bottom Footer */}
         <div className="text-center pt-8 border-t border-border animate-fade-in-up" style={{ animationDelay: "0.8s" }}>
           <p className="text-muted-foreground text-sm">
-            © 2025 Your Name. All rights reserved. | Crafted with ✨ and care
+            © 2025 Oseni Oluwabunmi
           </p>
         </div>
       </div>

@@ -3,6 +3,7 @@
 import { useState } from "react"
 import Navigation from "@/components/navigation"
 import Hero from "@/components/hero"
+import About from "@/components/about"
 import Portfolio from "@/components/portfolio"
 import Experience from "@/components/experience"
 import Resume from "@/components/resume"
@@ -21,12 +22,13 @@ export default function Home() {
       <Hero setActiveSection={setActiveSection} />
       <Portfolio />
       <Experience />
+      <About />
       <Resume />
-      <Blog />
-      <Testimonials />
-      <CompaniesMarquee />
-      <Interests />
-      <Contact />
+{/*       <Blog />
+ */}      {/* <Testimonials /> */}
+{/*       <CompaniesMarquee />
+/*  */}      {/* <Interests /> */}
+ */      <Contact />
     </main>
   )
 }

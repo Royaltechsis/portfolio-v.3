@@ -22,6 +22,7 @@ export default function Navigation({ activeSection, setActiveSection }: Navigati
   }
 
   const links = [
+    { href: "#about", label: "About", id: "about" },
     { href: "#portfolio", label: "Portfolio", id: "portfolio" },
     { href: "#resume", label: "Resume", id: "resume" },
     { href: "#contact", label: "Contact Me", id: "contact" },

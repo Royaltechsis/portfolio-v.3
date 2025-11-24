@@ -9,11 +9,20 @@ export default function Portfolio() {
   const [showPrivateModal, setShowPrivateModal] = useState(false)
   const [showNotPublicModal, setShowNotPublicModal] = useState(false)
   const [modalProjectTitle, setModalProjectTitle] = useState<string | null>(null)
+  const [showAllProjects, setShowAllProjects] = useState(false)
 
   const handlePrivateRepoClick = (e: React.MouseEvent) => {
     e.preventDefault()
     setShowPrivateModal(true)
   }
+
+  // Featured project IDs to display initially
+  const featuredProjectIds = [1, 2, 3, 4, 5, 7, 8, 10, 12, 13]
+  
+  // Filter projects based on whether showing all or just featured
+  const displayedProjects = showAllProjects 
+    ? projects 
+    : projects.filter(project => featuredProjectIds.includes(project.id))
 
   return (
     <>
@@ -28,7 +37,7 @@ export default function Portfolio() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {projects.map((project, index) => (
+            {displayedProjects.map((project, index) => (
               <div
                 key={project.id}
                 onMouseEnter={() => setHoveredId(project.id)}
@@ -123,6 +132,35 @@ export default function Portfolio() {
               </div>
             ))}
           </div>
+
+          {/* Show More/Less Button */}
+          {!showAllProjects && projects.length > featuredProjectIds.length && (
+            <div className="mt-12 text-center animate-fade-in-up" style={{ animationDelay: "800ms" }}>
+              <button
+                onClick={() => setShowAllProjects(true)}
+                className="inline-flex items-center gap-3 px-8 py-4 bg-primary text-primary-foreground rounded-lg font-semibold hover:shadow-lg hover:shadow-primary/30 hover:scale-105 transition-all duration-300"
+              >
+                <span>See Extra Projects</span>
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+            </div>
+          )}
+
+          {showAllProjects && (
+            <div className="mt-12 text-center animate-fade-in-up">
+              <button
+                onClick={() => setShowAllProjects(false)}
+                className="inline-flex items-center gap-3 px-8 py-4 border-2 border-primary text-primary rounded-lg font-semibold hover:bg-primary/5 hover:scale-105 transition-all duration-300"
+              >
+                <span>Show Less</span>
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 15l7-7 7 7" />
+                </svg>
+              </button>
+            </div>
+          )}
         </div>
       </section>
 

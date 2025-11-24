@@ -58,9 +58,6 @@ export default function Experience() {
                             <h3 className="text-base md:text-lg lg:text-xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent flex-1 transition-all duration-300">
                               {exp.title}
                             </h3>
-                            <span className="text-xs md:text-sm font-semibold text-muted-foreground whitespace-nowrap md:hidden transition-all duration-300 group-hover:text-primary">
-                              {exp.period}
-                            </span>
                           </div>
                           <p className="text-xs md:text-sm lg:text-base font-medium text-primary/80 mt-1 transition-all duration-300 group-hover:text-primary">{exp.company}</p>
                           
@@ -79,9 +76,6 @@ export default function Experience() {
                             </div>
                           </div>
                         </div>
-                        <span className="text-xs md:text-sm font-semibold text-muted-foreground whitespace-nowrap hidden md:block transition-all duration-300 group-hover:text-primary">
-                          {exp.period}
-                        </span>
                       </div>
 
                       {/* Expandable content */}

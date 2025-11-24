@@ -9,7 +9,9 @@ import {
   SiTypescript, 
   SiTailwindcss, 
   SiNextdotjs, 
-  SiWordpress 
+  SiWordpress,
+  SiPostgresql,
+  SiPhp
 } from "react-icons/si"
 
 const skillIcons: { [key: string]: React.ReactNode } = {
@@ -17,6 +19,8 @@ const skillIcons: { [key: string]: React.ReactNode } = {
   Node: <SiNodedotjs className="text-green-600" />,
   Express: <SiExpress className="text-gray-700 dark:text-gray-300" />,
   MongoDB: <SiMongodb className="text-green-600" />,
+  PostgreSQL: <SiPostgresql className="text-blue-600" />,
+  PHP: <SiPhp className="text-indigo-600" />,
   // Frontend
   React: <SiReact className="text-cyan-500" />,
   "React Native": <SiReact className="text-cyan-500" />,
@@ -28,16 +32,18 @@ const skillIcons: { [key: string]: React.ReactNode } = {
 }
 
 const skills = [
-  { name: "Node", level: 75 },
-  { name: "Express", level: 75 },
-  { name: "TypeScript", level: 80 },
-  { name: "JavaScript", level: 80 },
-  { name: "MongoDB", level: 76 },
-  { name: "React", level: 80 },
-  { name: "React Native", level: 65 },
-  { name: "TailwindCSS", level: 99 },
-  { name: "Next.js", level: 60 },
-  { name: "WordPress", level: 90 },
+  { name: "Node" },
+  { name: "Express" },
+  { name: "TypeScript" },
+  { name: "JavaScript" },
+  { name: "MongoDB" },
+  { name: "PostgreSQL" },
+  { name: "PHP" },
+  { name: "React" },
+  { name: "React Native" },
+  { name: "TailwindCSS" },
+  { name: "Next.js" },
+  { name: "WordPress" },
 ]
 
 const strengths = [
@@ -53,6 +59,11 @@ const education = [
     institution: "Federal University of Technology, Akure (FUTA)",
     program: "B.Tech Software Engineering",
     duration: "2023 - Present",
+  },
+  {
+    institution: "Smart Systems Research Laboratory (SSRL) - FUTA",
+    program: "Intern - Technology Research & Development",
+    duration: "2025",
   },
   {
     institution: "Web3Bridge Cohort XI",
@@ -101,23 +112,11 @@ export default function Resume() {
                 className="p-6 rounded-xl bg-gradient-to-br from-primary/5 to-accent/5 border border-primary/20 hover:border-primary/40 hover:scale-105 hover:shadow-xl transition-all duration-300 animate-fade-in-up group"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
-                <div className="flex items-center justify-between mb-3">
-                  <div className="flex items-center gap-3">
-                    <span className="text-2xl flex items-center group-hover:scale-125 transition-transform duration-300">
-                      {skillIcons[skill.name] || "⚙️"}
-                    </span>
-                    <span className="font-semibold text-foreground">{skill.name}</span>
-                  </div>
-                  <span className="text-sm font-bold text-primary">{skill.level}%</span>
-                </div>
-                <div className="w-full bg-muted rounded-full h-2 overflow-hidden">
-                  <div
-                    className="h-full bg-gradient-to-r from-primary to-accent rounded-full transition-all duration-1000 animate-shimmer"
-                    style={{ 
-                      width: `${skill.level}%`,
-                      transitionDelay: `${index * 100}ms`
-                    }}
-                  />
+                <div className="flex items-center gap-3">
+                  <span className="text-2xl flex items-center group-hover:scale-125 transition-transform duration-300">
+                    {skillIcons[skill.name] || "⚙️"}
+                  </span>
+                  <span className="font-semibold text-foreground">{skill.name}</span>
                 </div>
               </div>
             ))}

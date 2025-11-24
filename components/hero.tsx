@@ -50,13 +50,19 @@ export default function Hero({ setActiveSection }: HeroProps) {
 
           <div className={`flex flex-col sm:flex-row gap-4 justify-center transition-all duration-700 denpm run lay-500 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"}`}>
             <button
-              onClick={() => setActiveSection("portfolio")}
+              onClick={() => {
+                setActiveSection("portfolio")
+                document.getElementById("portfolio")?.scrollIntoView({ behavior: "smooth" })
+              }}
               className="px-8 py-3 bg-primary text-primary-foreground rounded-lg font-semibold hover:shadow-lg hover:shadow-primary/30 hover:scale-105 hover:-translate-y-1 transition-all duration-300"
             >
               View My Work
             </button>
             <button
-              onClick={() => setActiveSection("resume")}
+              onClick={() => {
+                setActiveSection("resume")
+                document.getElementById("resume")?.scrollIntoView({ behavior: "smooth" })
+              }}
               className="px-8 py-3 border-2 border-primary text-primary rounded-lg font-semibold hover:bg-primary/5 hover:scale-105 hover:-translate-y-1 transition-all duration-300"
             >
               Learn About Me
@@ -65,7 +71,7 @@ export default function Hero({ setActiveSection }: HeroProps) {
         </div>
 
         {/* Scroll indicator */}
-        <div
+       {/*  <div
           className={`absolute bottom-10 left-1/2 -translate-x-1/2 transition-all duration-1000 ${isVisible ? "opacity-100" : "opacity-0"}`}
         >
           <div className="animate-bounce">
@@ -73,7 +79,7 @@ export default function Hero({ setActiveSection }: HeroProps) {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
             </svg>
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   )
