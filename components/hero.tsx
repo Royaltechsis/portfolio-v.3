@@ -27,7 +27,7 @@ export default function Hero({ setActiveSection }: HeroProps) {
             <div className="relative w-40 h-40">
               <div className="absolute inset-0 bg-gradient-to-r from-primary via-accent to-primary rounded-full blur-lg opacity-75" />
               <img
-                src="/professional-woman-portrait.jpg"
+                src="/studio.jpg"
                 alt="Profile"
                 className="relative w-40 h-40 rounded-full object-cover border-4 border-background shadow-lg"
               />
