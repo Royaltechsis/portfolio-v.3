@@ -1,18 +1,30 @@
 "use client"
 
-const skillIcons: { [key: string]: string } = {
+import { 
+  SiNodedotjs, 
+  SiExpress, 
+  SiMongodb, 
+  SiReact, 
+  SiJavascript, 
+  SiTypescript, 
+  SiTailwindcss, 
+  SiNextdotjs, 
+  SiWordpress 
+} from "react-icons/si"
+
+const skillIcons: { [key: string]: React.ReactNode } = {
   // Backend
-  Node: "🟢",
-  Express: "🚂",
-  MongoDB: "🍃",
+  Node: <SiNodedotjs className="text-green-600" />,
+  Express: <SiExpress className="text-gray-700 dark:text-gray-300" />,
+  MongoDB: <SiMongodb className="text-green-600" />,
   // Frontend
-  React: "⚛️",
-  "React Native": "📱",
-  JavaScript: "💛",
-  TypeScript: "📘",
-  TailwindCSS: "🌊",
-  "Next.js": "▲",
-  WordPress: "📝",
+  React: <SiReact className="text-cyan-500" />,
+  "React Native": <SiReact className="text-cyan-500" />,
+  JavaScript: <SiJavascript className="text-yellow-400" />,
+  TypeScript: <SiTypescript className="text-blue-600" />,
+  TailwindCSS: <SiTailwindcss className="text-cyan-400" />,
+  "Next.js": <SiNextdotjs className="text-black dark:text-white" />,
+  WordPress: <SiWordpress className="text-blue-700" />,
 }
 
 const skills = [
@@ -90,7 +102,9 @@ export default function Resume() {
               >
                 <div className="flex items-center justify-between mb-3">
                   <div className="flex items-center gap-3">
-                    <span className="text-2xl">{skillIcons[skill.name] || "⚙️"}</span>
+                    <span className="text-2xl flex items-center">
+                      {skillIcons[skill.name] || "⚙️"}
+                    </span>
                     <span className="font-semibold text-foreground">{skill.name}</span>
                   </div>
                   <span className="text-sm font-bold text-primary">{skill.level}%</span>
