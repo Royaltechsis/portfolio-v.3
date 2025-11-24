@@ -91,6 +91,15 @@ export const projects: Project[] = [
   },
   {
     id: 9,
+    title: "JWT Secret Generator",
+    description: "A secure 32-bit random JWT secret generator tool with one-click copy functionality for developers.",
+    image: "/placeholder.jpg",
+    tags: ["React", "JavaScript", "Security", "Developer Tools"],
+    link: "https://jwt-secret-gen.vercel.app/",
+    codeLink: "https://github.com/Royaltechsis/jwt_secret-gen",
+  },
+  {
+    id: 10,
     title: "Nuel's Store",
     description: "An e-commerce platform for gadgets. (sign up first to use)",
     image: "/ecommerce-dashboard.png",
@@ -99,7 +108,7 @@ export const projects: Project[] = [
     codeLink: "https://github.com/Royaltechsis/Nuel-Store",
   },
   {
-    id: 10,
+    id: 11,
     title: "Healthy Skincare",
     description: "A Website with ecommerce capabilities for HSC",
     image: "/ecommerce-interface.jpg",
@@ -109,7 +118,7 @@ export const projects: Project[] = [
     isPrivate: true,
   },
   {
-    id: 11,
+    id: 12,
     title: "Oluwasola Ajao & Company",
     description: "A website for Oluwasola Ajao and Co (Chartered Accountants)",
     image: "/placeholder.jpg",
@@ -119,7 +128,7 @@ export const projects: Project[] = [
     isPrivate: true,
   },
   {
-    id: 12,
+    id: 13,
     title: "Easy Banking Landing Page",
     description: "Landing page for an easy banking service. (Static landing page design)",
     image: "/analytics-dashboard.png",
@@ -128,7 +137,7 @@ export const projects: Project[] = [
     codeLink: "https://github.com/Royaltechsis/easy-banking-landing-page",
   },
   {
-    id: 13,
+    id: 14,
     title: "Infhinet Ways",
     description: "A personal Blogging platform",
     image: "/placeholder.jpg",
@@ -137,7 +146,7 @@ export const projects: Project[] = [
     codeLink: "https://github.com/Royaltechsis/infhinet-ways",
   },
   {
-    id: 14,
+    id: 15,
     title: "My Tube",
     description: "A YouTube Video feed made with React.",
     image: "/react-development-code.jpg",
@@ -146,7 +155,7 @@ export const projects: Project[] = [
     codeLink: "https://github.com/Royaltechsis/my-tube",
   },
   {
-    id: 15,
+    id: 16,
     title: "Meme Generator",
     description: "Create and share memes easily.",
     image: "/placeholder.jpg",
@@ -155,10 +164,16 @@ export const projects: Project[] = [
     codeLink: "https://github.com/Royaltechsis/meme-generator",
   },
   {
-    id: 16,
+    id: 17,
     title: "Oseni's LinkedIn Clone",
     description: "A LinkedIn clone with Google Auth.",
     image: "/placeholder.jpg",
+    tags: ["React", "Firebase", "Tailwind CSS", "JavaScript"],
+    link: "https://osenis-linked-in-clone.vercel.app",
+    codeLink: "https://github.com/Royaltechsis/Oseni-s-LinkedIn-Clone",
+  },
+  {
+    id: 18,
     tags: ["React", "Firebase", "Tailwind CSS", "JavaScript"],
     link: "https://osenis-linked-in-clone.vercel.app",
     codeLink: "https://github.com/Royaltechsis/Oseni-s-LinkedIn-Clone",
@@ -189,5 +204,14 @@ export const projects: Project[] = [
     tags: ["React", "Tailwind CSS", "TypeScript"],
     link: "https://multi-step-form-bay-theta.vercel.app",
     codeLink: "https://github.com/Royaltechsis/multi-step-form",
+  },
+  {
+    id: 20,
+    title: "JWT Secret Generator",
+    description: "A secure 32-bit random JWT secret generator tool with one-click copy functionality for developers.",
+    image: "/placeholder.jpg",
+    tags: ["React", "JavaScript", "Security", "Developer Tools"],
+    link: "https://jwt-secret-gen.vercel.app/",
+    codeLink: "https://github.com/Royaltechsis/jwt_secret-gen",
   },
 ]

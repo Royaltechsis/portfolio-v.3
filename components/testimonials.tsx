@@ -73,7 +73,7 @@ export default function Testimonials() {
     <section id="testimonials" className="py-20 md:py-32 px-6 bg-background">
       <div className="max-w-4xl mx-auto">
         {/* Header */}
-        <div className="mb-16 text-center">
+        <div className="mb-16 text-center animate-fade-in-up">
           <p className="text-accent font-semibold mb-3 tracking-wider">What People Say</p>
           <h2 className="text-4xl md:text-5xl font-bold text-balance mb-4">Testimonials</h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
@@ -83,20 +83,20 @@ export default function Testimonials() {
 
         {/* Testimonial Card */}
         <div className="relative">
-          <div className="bg-gradient-to-br from-background via-background to-background border border-border rounded-2xl p-8 md:p-12 min-h-[400px] flex flex-col justify-between">
+          <div className="bg-gradient-to-br from-background via-background to-background border border-border rounded-2xl p-8 md:p-12 min-h-[400px] flex flex-col justify-between transition-all duration-500 hover:shadow-2xl hover:border-accent/30 animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
             {/* Quote Icon */}
-            <div className="mb-6">
+            <div className="mb-6 animate-scale-in" style={{ animationDelay: "0.3s" }}>
               <Quote className="w-12 h-12 text-accent opacity-30" />
             </div>
 
             {/* Quote Text */}
-            <p className="text-lg md:text-2xl font-medium mb-8 text-foreground italic leading-relaxed">
+            <p className="text-lg md:text-2xl font-medium mb-8 text-foreground italic leading-relaxed animate-fade-in" style={{ animationDelay: "0.4s" }}>
               "{current.quote}"
             </p>
 
             {/* Author Info */}
-            <div className="flex items-center gap-4 pt-8 border-t border-border">
-              <div className={`w-16 h-16 rounded-full bg-gradient-to-br ${current.color} flex-shrink-0`}>
+            <div className="flex items-center gap-4 pt-8 border-t border-border animate-fade-in-up" style={{ animationDelay: "0.5s" }}>
+              <div className={`w-16 h-16 rounded-full bg-gradient-to-br ${current.color} flex-shrink-0 transition-transform duration-300 hover:scale-110`}>
                 <img
                   src={current.image || "/placeholder.svg"}
                   alt={current.name}
@@ -113,17 +113,17 @@ export default function Testimonials() {
           </div>
 
           {/* Navigation Buttons */}
-          <div className="flex gap-4 mt-8 justify-center">
+          <div className="flex gap-4 mt-8 justify-center animate-fade-in-up" style={{ animationDelay: "0.6s" }}>
             <button
               onClick={prevTestimonial}
-              className="p-3 rounded-full bg-accent text-white hover:shadow-lg hover:scale-105 transition-all duration-300"
+              className="p-3 rounded-full bg-accent text-white hover:shadow-lg hover:scale-110 hover:-translate-x-1 transition-all duration-300 active:scale-95"
               aria-label="Previous testimonial"
             >
               <ChevronLeft className="w-5 h-5" />
             </button>
             <button
               onClick={nextTestimonial}
-              className="p-3 rounded-full bg-accent text-white hover:shadow-lg hover:scale-105 transition-all duration-300"
+              className="p-3 rounded-full bg-accent text-white hover:shadow-lg hover:scale-110 hover:translate-x-1 transition-all duration-300 active:scale-95"
               aria-label="Next testimonial"
             >
               <ChevronRight className="w-5 h-5" />
@@ -131,12 +131,12 @@ export default function Testimonials() {
           </div>
 
           {/* Dot Indicators */}
-          <div className="flex gap-2 justify-center mt-8">
+          <div className="flex gap-2 justify-center mt-8 animate-fade-in-up" style={{ animationDelay: "0.7s" }}>
             {testimonials.map((_, index) => (
               <button
                 key={index}
                 onClick={() => setCurrentIndex(index)}
-                className={`h-2 rounded-full transition-all duration-300 ${
+                className={`h-2 rounded-full transition-all duration-300 hover:scale-125 ${
                   index === currentIndex ? "bg-accent w-8" : "bg-border w-2"
                 }`}
                 aria-label={`Go to testimonial ${index + 1}`}

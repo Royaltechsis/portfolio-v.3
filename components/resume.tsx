@@ -85,7 +85,7 @@ export default function Resume() {
   return (
     <section id="resume" className="py-20 md:py-32 px-6">
       <div className="max-w-5xl mx-auto">
-        <div className="mb-16 text-center">
+        <div className="mb-16 text-center animate-fade-in-up">
           <p className="text-primary font-semibold mb-3 tracking-widest uppercase text-sm">Expertise & Background</p>
           <h2 className="text-4xl md:text-5xl font-bold text-balance mb-4">Skills, Education & More</h2>
           <p className="text-foreground/70 text-lg">Everything you need to know about my professional capabilities.</p>
@@ -93,16 +93,17 @@ export default function Resume() {
 
         {/* Skills with Progress Bars */}
         <div className="mb-16">
-          <h3 className="text-2xl font-bold mb-6 text-foreground">Technical Skills</h3>
+          <h3 className="text-2xl font-bold mb-6 text-foreground animate-slide-in-left">Technical Skills</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {skills.map((skill) => (
+            {skills.map((skill, index) => (
               <div
                 key={skill.name}
-                className="p-6 rounded-xl bg-gradient-to-br from-primary/5 to-accent/5 border border-primary/20 hover:border-primary/40 transition-all duration-300"
+                className="p-6 rounded-xl bg-gradient-to-br from-primary/5 to-accent/5 border border-primary/20 hover:border-primary/40 hover:scale-105 hover:shadow-xl transition-all duration-300 animate-fade-in-up group"
+                style={{ animationDelay: `${index * 100}ms` }}
               >
                 <div className="flex items-center justify-between mb-3">
                   <div className="flex items-center gap-3">
-                    <span className="text-2xl flex items-center">
+                    <span className="text-2xl flex items-center group-hover:scale-125 transition-transform duration-300">
                       {skillIcons[skill.name] || "⚙️"}
                     </span>
                     <span className="font-semibold text-foreground">{skill.name}</span>
@@ -111,8 +112,11 @@ export default function Resume() {
                 </div>
                 <div className="w-full bg-muted rounded-full h-2 overflow-hidden">
                   <div
-                    className="h-full bg-gradient-to-r from-primary to-accent rounded-full transition-all duration-500"
-                    style={{ width: `${skill.level}%` }}
+                    className="h-full bg-gradient-to-r from-primary to-accent rounded-full transition-all duration-1000 animate-shimmer"
+                    style={{ 
+                      width: `${skill.level}%`,
+                      transitionDelay: `${index * 100}ms`
+                    }}
                   />
                 </div>
               </div>
@@ -122,12 +126,13 @@ export default function Resume() {
 
         {/* Strengths */}
         <div className="mb-16">
-          <h3 className="text-2xl font-bold mb-6 text-foreground">Core Strengths</h3>
+          <h3 className="text-2xl font-bold mb-6 text-foreground animate-slide-in-right">Core Strengths</h3>
           <div className="flex flex-wrap gap-3">
             {strengths.map((item, index) => (
               <div
                 key={index}
-                className="px-6 py-3 rounded-full bg-gradient-to-r from-primary/20 to-accent/20 text-primary border border-primary/30 hover:border-primary/60 transition-all duration-300 font-medium"
+                className="px-6 py-3 rounded-full bg-gradient-to-r from-primary/20 to-accent/20 text-primary border border-primary/30 hover:border-primary/60 hover:scale-110 hover:-translate-y-1 transition-all duration-300 font-medium animate-fade-in cursor-default"
+                style={{ animationDelay: `${index * 100}ms` }}
               >
                 {item.strenght}
               </div>
@@ -137,12 +142,13 @@ export default function Resume() {
 
         {/* Education */}
         <div className="mb-16">
-          <h3 className="text-2xl font-bold mb-6 text-foreground">Education & Certifications</h3>
+          <h3 className="text-2xl font-bold mb-6 text-foreground animate-slide-in-left">Education & Certifications</h3>
           <div className="space-y-4">
             {education.map((edu, index) => (
               <div
                 key={index}
-                className="p-6 bg-card border border-border/40 rounded-xl hover:border-primary/40 transition-all duration-300 hover:shadow-lg"
+                className="p-6 bg-card border border-border/40 rounded-xl hover:border-primary/40 hover:scale-102 hover:shadow-xl transition-all duration-300 hover-lift animate-fade-in-up"
+                style={{ animationDelay: `${index * 100}ms` }}
               >
                 <h4 className="font-bold text-lg text-foreground">{edu.institution}</h4>
                 <p className="text-primary font-semibold mt-1">{edu.program}</p>
@@ -153,8 +159,8 @@ export default function Resume() {
         </div>
 
         {/* Resume Download */}
-        <div className="text-center">
-          <button className="inline-flex items-center gap-3 px-8 py-3 bg-primary text-primary-foreground rounded-lg font-semibold hover:shadow-lg hover:shadow-primary/30 transition-all duration-300">
+        <div className="text-center animate-fade-in-up" style={{ animationDelay: "600ms" }}>
+          <button className="inline-flex items-center gap-3 px-8 py-3 bg-primary text-primary-foreground rounded-lg font-semibold hover:shadow-lg hover:shadow-primary/30 hover:scale-110 hover:-translate-y-1 transition-all duration-300 animate-glow">
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path
                 strokeLinecap="round"

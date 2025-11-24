@@ -28,33 +28,38 @@ export default function Navigation({ activeSection, setActiveSection }: Navigati
   ]
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-md border-b border-border/40">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-md border-b border-border/40 animate-slide-down">
       <div className="max-w-7xl mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           {/* Logo - Girl Boss Edition */}
-          <div className="text-2xl font-bold tracking-tight">
-            <span className="bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">
-              Portfolio
+          <div className="text-2xl font-bold tracking-tight animate-fade-in">
+            <span className="bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent hover:scale-105 inline-block transition-transform duration-300">
+              Oluwabunmi
             </span>
           </div>
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center gap-8">
-            {links.map((link) => (
+            {links.map((link, i) => (
               <a
                 key={link.id}
                 href={link.href}
                 onClick={() => setActiveSection(link.id)}
-                className={`text-sm font-semibold transition-all duration-300 ${
+                className={`text-sm font-semibold transition-all duration-300 relative group animate-fade-in ${
                   activeSection === link.id ? "text-primary" : "text-foreground/60 hover:text-primary"
                 }`}
+                style={{ animationDelay: `${0.1 + i * 0.1}s` }}
               >
                 {link.label}
+                <span className={`absolute -bottom-1 left-0 h-0.5 bg-primary transition-all duration-300 ${
+                  activeSection === link.id ? "w-full" : "w-0 group-hover:w-full"
+                }`}></span>
               </a>
             ))}
             <button
               onClick={toggleTheme}
-              className="p-2 rounded-lg hover:bg-secondary transition-colors text-foreground"
+              className="p-2 rounded-lg hover:bg-secondary transition-all duration-300 text-foreground hover:scale-110 hover:rotate-180 animate-fade-in"
+              style={{ animationDelay: "0.4s" }}
               aria-label="Toggle dark mode"
             >
               {isDark ? (
@@ -73,7 +78,7 @@ export default function Navigation({ activeSection, setActiveSection }: Navigati
           <div className="md:hidden flex items-center gap-3">
             <button
               onClick={toggleTheme}
-              className="p-2 rounded-lg hover:bg-secondary transition-colors text-foreground"
+              className="p-2 rounded-lg hover:bg-secondary transition-all duration-300 text-foreground hover:scale-110 hover:rotate-180"
               aria-label="Toggle dark mode"
             >
               {isDark ? (
@@ -86,8 +91,8 @@ export default function Navigation({ activeSection, setActiveSection }: Navigati
                 </svg>
               )}
             </button>
-            <button className="p-2 rounded-lg hover:bg-secondary transition-colors" onClick={() => setIsOpen(!isOpen)}>
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <button className="p-2 rounded-lg hover:bg-secondary transition-all duration-300 hover:scale-110" onClick={() => setIsOpen(!isOpen)}>
+              <svg className="w-6 h-6 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path
                   strokeLinecap="round"
                   strokeLinejoin="round"
@@ -102,7 +107,7 @@ export default function Navigation({ activeSection, setActiveSection }: Navigati
         {/* Mobile Menu */}
         {isOpen && (
           <div className="md:hidden mt-4 space-y-3 pb-4 animate-slide-down">
-            {links.map((link) => (
+            {links.map((link, i) => (
               <a
                 key={link.id}
                 href={link.href}
@@ -110,11 +115,12 @@ export default function Navigation({ activeSection, setActiveSection }: Navigati
                   setActiveSection(link.id)
                   setIsOpen(false)
                 }}
-                className={`block px-3 py-2 rounded-lg font-semibold transition-colors ${
+                className={`block px-3 py-2 rounded-lg font-semibold transition-all duration-300 hover:scale-105 animate-fade-in-up ${
                   activeSection === link.id
-                    ? "bg-primary text-primary-foreground"
-                    : "text-foreground/60 hover:text-primary"
+                    ? "bg-primary text-primary-foreground shadow-lg"
+                    : "text-foreground/60 hover:text-primary hover:bg-secondary"
                 }`}
+                style={{ animationDelay: `${i * 0.1}s` }}
               >
                 {link.label}
               </a>
