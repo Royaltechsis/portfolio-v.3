@@ -12,6 +12,16 @@ export interface Project {
 export const projects: Project[] = [
   {
     id: 1,
+    title: "Grearn.org ",
+    description: "Officaila Website/Landing page for Grearn Agricultural Trading Company",
+    image: "/grearn-landing.png",
+    tags: ["Website","NextJS","Landing Page", "Real-time Updates"],
+    link: "https://grearn.org.ng/",
+    codeLink: "#",
+    isPrivate: false,
+  },
+  {
+    id: 2,
     title: "Subtop VTU App",
     description: "Full-stack React Native and Node.js VTU app with eBills.africa API integration for mobile top-ups and utility payments",
     image: "/placeholder.jpg",
@@ -21,7 +31,7 @@ export const projects: Project[] = [
     isPrivate: true,
   },
   {
-    id: 2,
+    id: 3 ,
     title: "Grearn Agricultural Trading App",
     description: "Mobile app for investing in foodstuffs and tracking agricultural investments on Android and iOS",
     image: "/placeholder.jpg",
@@ -31,7 +41,7 @@ export const projects: Project[] = [
     isPrivate: true,
   },
   {
-    id: 3,
+    id: 4,
     title: "Speedax Fintech Web App",
     description: "Fintech web application with interfaces for fund transfers, VTU services, and cryptocurrency transactions",
     image: "/analytics-dashboard.png",
@@ -41,7 +51,7 @@ export const projects: Project[] = [
     isPrivate: true,
   },
   {
-    id: 4,
+    id: 5,
     title: "Riverstone Real Estate Management",
     description: "Real estate management system with backend enhancements, feature updates, and multi-user access",
     image: "/placeholder.jpg",
@@ -51,7 +61,7 @@ export const projects: Project[] = [
     isPrivate: true,
   },
   {
-    id: 5,
+    id: 6,
     title: "NaijaTask Platform",
     description: "WordPress platform with custom plugins for enhanced functionality and user experience",
     image: "/placeholder.jpg",
@@ -61,7 +71,7 @@ export const projects: Project[] = [
     isPrivate: true,
   },
   {
-    id: 6,
+    id: 7,
     title: "Evidence Loop AI Assistant",
     description: "Confidential AI research assistant mobile application with secure, efficient performance",
     image: "/ai-content-tool.jpg",
@@ -71,7 +81,7 @@ export const projects: Project[] = [
     isPrivate: true,
   },
   {
-    id: 7,
+    id: 8,
     title: "Blass eLibrary",
     description: "Multi-user full-stack web application for library uploads, searches, and resource access",
     image: "/books-learning-education.jpg",
@@ -81,7 +91,7 @@ export const projects: Project[] = [
     isPrivate: true,
   },
   {
-    id: 8,
+    id: 9,
     title: "Infhinet",
     description: "An e-learning platform and community for tech enthusiasts",
     image: "/ecommerce-interface.jpg",
@@ -90,7 +100,7 @@ export const projects: Project[] = [
     codeLink: "https://github.com/Royaltechsis/infhinetclass/",
   },
   {
-    id: 9,
+    id: 10,
     title: "JWT Secret Generator",
     description: "A secure 32-bit random JWT secret generator tool with one-click copy functionality for developers.",
     image: "/placeholder.jpg",
@@ -99,7 +109,7 @@ export const projects: Project[] = [
     codeLink: "https://github.com/Royaltechsis/jwt_secret-gen",
   },
   {
-    id: 10,
+    id: 11,
     title: "Event Management System",
     description: "An event management system with automatic Google Calendar sync. Events are added to users' calendars with a single click.",
     image: "/placeholder.jpg",
@@ -109,7 +119,7 @@ export const projects: Project[] = [
     isPrivate: true,
   },
   {
-    id: 11,
+    id: 12,
     title: "Nuel's Store",
     description: "An e-commerce platform for gadgets. (sign up first to use)",
     image: "/ecommerce-dashboard.png",
@@ -118,7 +128,7 @@ export const projects: Project[] = [
     codeLink: "https://github.com/Royaltechsis/Nuel-Store",
   },
   {
-    id: 12,
+    id: 13,
     title: "Healthy Skincare",
     description: "A Website with ecommerce capabilities for HSC",
     image: "/ecommerce-interface.jpg",
@@ -128,7 +138,7 @@ export const projects: Project[] = [
     isPrivate: true,
   },
   {
-    id: 13,
+    id: 14,
     title: "Oluwasola Ajao & Company",
     description: "A website for Oluwasola Ajao and Co (Chartered Accountants)",
     image: "/placeholder.jpg",
@@ -138,7 +148,7 @@ export const projects: Project[] = [
     isPrivate: true,
   },
   {
-    id: 14,
+    id: 15,
     title: "Easy Banking Landing Page",
     description: "Landing page for an easy banking service. (Static landing page design)",
     image: "/analytics-dashboard.png",
@@ -147,7 +157,7 @@ export const projects: Project[] = [
     codeLink: "https://github.com/Royaltechsis/easy-banking-landing-page",
   },
   {
-    id: 15,
+    id: 16,
     title: "Infhinet Ways",
     description: "A personal Blogging platform",
     image: "/placeholder.jpg",
@@ -156,7 +166,7 @@ export const projects: Project[] = [
     codeLink: "https://github.com/Royaltechsis/infhinet-ways",
   },
   {
-    id: 16,
+    id: 17,
     title: "My Tube",
     description: "A YouTube Video feed made with React.",
     image: "/react-development-code.jpg",
@@ -165,16 +175,16 @@ export const projects: Project[] = [
     codeLink: "https://github.com/Royaltechsis/my-tube",
   },
   {
-    id: 17,
-    title: "Meme Generator",
-    description: "Create and share memes easily.",
-    image: "/placeholder.jpg",
+    id: 18,
+    title: "Flip Game ",
+    description: "A simple Match 2 game built with js and Tailwind CSS.",
+    image: "/tiles.png",
     tags: ["React", "CSS", "JavaScript"],
-    link: "https://meme-generator-lovat-seven.vercel.app",
-    codeLink: "https://github.com/Royaltechsis/meme-generator",
+    link: "https://flip-game-pearl.vercel.app/",
+    codeLink: "https://github.com/Royaltechsis",
   },
   {
-    id: 18,
+    id: 19,
     title: "Oseni's LinkedIn Clone",
     description: "A LinkedIn clone with Google Auth.",
     image: "/placeholder.jpg",
@@ -183,7 +193,7 @@ export const projects: Project[] = [
     codeLink: "https://github.com/Royaltechsis/Oseni-s-LinkedIn-Clone",
   },
   {
-    id: 19,
+    id: 20,
     title: "Goal App",
     description: "A Web App that allows you to set and track your goals.",
     image: "/project-management-interface.jpg",
@@ -192,7 +202,7 @@ export const projects: Project[] = [
     codeLink: "https://github.com/Royaltechsis/goalapp",
   },
   {
-    id: 20,
+    id: 21,
     title: "To-do-list",
     description: "A to-do list website.",
     image: "/project-management-interface.png",
@@ -201,7 +211,7 @@ export const projects: Project[] = [
     codeLink: "https://github.com/Royaltechsis/to-do-list-project",
   },
   {
-    id: 21,
+    id: 22,
     title: "Multi-Step Form",
     description: "A dynamic multi-step form implementation.",
     image: "/placeholder.jpg",
